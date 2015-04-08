@@ -76,22 +76,19 @@
 	        	"_overviewComment":"A short description of what happens in this tutorial, and an optional short explanation of the IIB concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
 	        	"sections":[
 	          		{
-	            		"section":"IBM Integration Bus provides a way to integrate with external application through the TCP/IP sockets. Two sets of TCP/IP nodes exist: TCPIPServer nodes and TCPIPClient nodes. Both can access the data streams; however, one set uses server connections and the other set uses client connections. The connection details can be specified on the nodes directly using port and host (only by Client nodes) or using specialized configurable services. This tutorial uses configurable services as a convenient way to manage the TCP/IP connections."
+	            		"section":"IBM Integration Bus provides a way to integrate with external application through the TCP/IP sockets. You can use TCPIPServer nodes that use server connection type and TCPIPClient nodes utilising client connection type. The connection can be specified using port and host (reqyired by Client nodes) or using TCPIP configurable services names. This tutorial uses configurable services as a convenient way to manage the TCP/IP connections."
 	          		},
 	          		{
-	            		"section":"This tutorial includes an application that simulates a TCP/IP Server <i>TCPIPServer</i> that is enabled to send data over the sockets. The port for the server is defined by a TCPServer configurable service. The main flow in the application is driven by an XML message arriving on the HTTP input node. Once the flow with TCP/IP Server node is deployed the server is started automatically and server connection is opened." 
+	            		"section":"This tutorial includes an application 'TCPIPServer' that simulates a TCP/IP Server that is configured to send the data over the TCPIP sockets. The main flow in the server application is driven by an XML message arriving on the HTTP input node. Once the flow with TCP/IP Server node is deployed the TCPIP server is started automatically." 
 	          		},
 	          		{
-	            		"section":"Another application <i>TCPClient</i> contains a flow that is driven by the TCPIP Client input node. By default this node does not open a client connection automatically when deployed. This is why we need to use a TCPIPClient configurable service to set the connection details for the node. This configurable service defines the server host, port, minimum number of connections automatically opened when the flow is deployed. In this case once the flow is deployed the client connection is opened and the node is ready for the arrival of data in the stream."
+	            		"section":"Another application 'TCPClient' contains a flow that is driven by the TCPIP Client input node. By default this node does not open a client connection. We need to use a TCPClient configurable service for the node configuration to enable at least 1 default client connection to be opened when the flow is deployed. The same configurable service also defines the server host name and port to connect to."
 	          		},
 	          		{
-	            		"section":"It is important to ensure that the TCPIP Client Input node understands how detect the record contents from the stream. This can be configured on the 'Records and Elements' node configuration tab. In this tutorial the record detection is set as 'Parsed Record Sequence' to use XML closing tags as a detection mechanism."
+	            		"section":"It is also very important to ensure that the TCPIP Client Input node is configured to detect the record contents from the stream. This can be configured on the 'Records and Elements' node configuration tab. In this tutorial the record detection is set as 'Parsed Record Sequence' to use XML closing tags as a detection mechanism."
 	          		},  
 	          		{
-	            		"section":"The TCPClient flow receives the message from the stream and then maps the incoming message to a different message format to write the output to the file using File Output node. In both applications Trace nodes are used to record the progress of the flows."
-	          		},
-	          		{
-	            		"section":"Shared library <i>DataLibrary</i> contains the data model that defines the message formats used by the applications."
+	            		"section":"The TCPClient flow receives the message from the stream and then maps the incoming message to a different message format to write the output to the file using File Output node."
 	          		}
 	        	]
 	        },
@@ -120,7 +117,7 @@
 			"create":{
 	        	"overview":{
 	          		"name":"Create",
-	          		"heading":"Import source code",
+	          		"heading":"Import",
 	          		"_createComment":"A description of what will happen when the user clicks Import.",
 	          		"sections":[
 	            		{
@@ -144,21 +141,6 @@
 	              			"title":"Knowledge Center link to ",
 	              			"description":"TCPIP Nodes",
 	              			"link":"com.ibm.etools.mft.doc/ac67370_.htm"
-	            		},
-	            		{
-	              			"title":"Knowledge Center link to ",
-	              			"description":"TCPIP Server Output Node",
-	              			"link":"com.ibm.etools.mft.doc/ac67340_.htm"
-	            		},
-	            		{
-	              			"title":"Knowledge Center link to ",
-	              			"description":"TCPIP Client Input Node",
-	              			"link":"com.ibm.etools.mft.doc/ac67300_.htm"
-	            		},
-	            		{
-	                		"title":"Knowledge Center link to ",
-	                		"description":"Creating Configurable Services",
-	                		"link":"com.ibm.etools.mft.doc/an37200_.htm"
 	            		}
 	          		]
 	        	},
@@ -211,9 +193,19 @@
 	        		"title":"Find out more",
 	          		"details":[
 	            		{
+	                		"title":"Knowledge Center link to ",
+	                		"description":"Creating Configurable Services",
+	                		"link":"com.ibm.etools.mft.doc/an37200_.htm"
+	            		},
+	            		{
 	              			"title":"Knowledge Center link to ",
-	              			"description":"Working with DFDL schema files",
-	              			"link":"com.ibm.etools.mft.doc/df20061_.htm"
+	              			"description":"TCPIP Server Output Node",
+	              			"link":"com.ibm.etools.mft.doc/ac67340_.htm"
+	            		},
+	            		{
+	              			"title":"Knowledge Center link to ",
+	              			"description":"TCPIP Client Input Node",
+	              			"link":"com.ibm.etools.mft.doc/ac67300_.htm"
 	            		}
 	          		]
 				}
