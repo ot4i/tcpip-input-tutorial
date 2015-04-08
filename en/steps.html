@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+ 
+	
+<!-- header::Start -->
+	<head>
+		<!-- Use Internet Explorer 9 Standards mode for Eclipse Browser Control - https://www.eclipse.org/swt/faq.php#browsernativeie and https://msdn.microsoft.com/en-us/library/jj676915%28v=vs.85%29.aspx -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		
+		<!-- Next 2 http=equiv headers required to disable caching the Eclipse Browser Widget -->
+		<meta http-equiv="Pragma" content="no-cache">
+  		<meta http-equiv="Expires" content="-1">
+
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
+		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="author" content="IBM">
+		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="keywords" content="keywords" > 
+		<meta name="robots" content="index,follow">
+		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		
+		<title>IBM Integration Bus V10 Tutorial</title>
+
+    	<link rel="stylesheet" href="http://ot4i.github.io/iib-tutorials/css/main.css" />
+		<link rel="stylesheet" href="http://ot4i.github.io/iib-tutorials/css/app.css" />
+    	
+		<script src="http://ot4i.github.io/iib-tutorials/js/json2.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/js2java.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/js2java_steps.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
+	</head>
+<!-- header::End -->
+<!-- body::Start -->
+		<body>
+  	<!-- body content here -->
+	<div class="row">
+	  <div class="small-12 medium-12 large-12 columns">
+	    <p> </p>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="small-9 medium-9 large-9 columns">
+	    <h4 class="title">Integration using TCPIP nodes <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> View Details</div> </action></h4>
+	  </div>
+	  <div class="small-3 medium-3 large-3 columns">
+		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bz90050_.htm')" class="small right helplink">IBM Knowledge Center Topic</a> 
+	  </div>
+	</div> 
+	<hr>
+	<div class="row">
+		<div class="small-10 medium-10 large-10 columns">
+		<h5> Learn how to use TCP/IP nodes for integration with external applications using TCPIP sockets. </h5>
+		</div>
+		<div class="small-2 medium-2 large-2 columns">
+			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</div>
+		</div>
+	</div>
+	<div class="row">          
+		  <div class="small-12 medium-12 large-12 columns">
+			<ul class="tabs vertical"> 
+				<li class="tab-title tab-title-small active">
+				  <a href="javascript:;" onclick="show('panel21')">Create</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel31')">Prepare</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel41')">Run</a> 
+				</li>
+			</ul>
+			<!-- editing -->
+			<div class="tabs-content panel-thin-blue vertical"> 
+		    	<div class="content active" id="panel21">
+		    		
+		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+				      	<div class="row content-details">
+					      	<h4>Import Source Code</h4>
+					        
+						    
+								<p> Click <span class="uicontrol">Import</span> to see appllications <i>TCPIPServer, TCPIPClient</i> and shared library <i>DataLibrary</i> in your workspace. </p>
+								
+							
+								<p> A message flow <span class="filepath">TCPIPProvider.msgflow</span> in the application <span class="application">TCPIPServer</span> receives the XML message through HTTP Input node. The message is parsed and passed to the  TCPIP Server Output node to send the data to the client connected on port 7778. The TCPIP Server Output node is configured using configurable service <span class="filepath">TCPIPTutorialServerCF</span>. To avoid deployment errors the configurable service must be created on the target deployment integration node before the application is deployed. Trace nodes are used in this tutorial to trace the data flow into the common file while the data travels across the message flows. </p>
+								
+							
+								<p> Application <span class="application">TCPIPClient</span> contains a message flow <span class="filepath">TCPIPReceiver.msgflow</span> which uses the TCPIP Client Input Node to receive the data from the server. The TCPIP Client Input Node is configured with the configigurable service <span class="filepath">TCPIPTutorialClientCF</span> that specifies the host, port, minimum number of automaticaly opened client connections. This message flow also contains a mapping node using nested maps to that transforms the message with arrays to a message with a different format. Finally the message is written to a file through the File Output node. </p>
+								
+							
+								<p> Shared library <span class="library">DataLibrary</span> contains a message models for the input and output message formats <i>SaleReport.xsd</i>, <i>SaleMessage.xsd</i> as well as test message that will be used to initiate the tutorial flow <i>TestSaleMessage.xml</i>. It also contains a batch file that contains commands that need to be executed in the IBM Integration Console to create both required configurable services <i>configure_tcpip.bat</i>.  </p>
+								
+							
+						</div>
+						
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67370_.htm')" title="Knowledge Center link to TCPIP Nodes">TCPIP Nodes</a> </li>
+							   	
+							
+							</ul>
+						</div>
+						
+					</div>
+					
+					<div class="small-2 medium-2 large-2 columns">
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainFlow')"> Import <img class="icon-image" src="http://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+										
+				    </div>
+					
+		    	</div>
+		    	<div class="content" id="panel31">
+					
+					<div class="small-12 medium-12 large-12 columns">
+					
+						<div class="row content-details">
+						  	<h4>Exploring the flows and creating configurable services</h4>
+						    
+						    
+								<p> Open the message flow <span class="filepath">TCPIPProvider.msgflow</span> in the application <span class="application">TCPIPServer</span> by double-clicking the flow.The flow sticky notes attached to the nodes provide details of node configuration. You can explore the node configuration in the <b>Properties</b> view by selecting nodes on the editor canvas. Note that the <i>'Connection details'</i> property of TCPIP Server Output Node points to a configurable service <span class="filepath">TCPIPTutorialServerCF</span>. </p>
+								
+							
+								<p> If you open the message flow <span class="filepath">TCPIPReceiver.msgflow</span> in the application <span class="application">TCPIPClient</span> by double-clicking the flow you can also view more information about particular node configuration using the sticky notes. Again note that the <i>'Connection details'</i> property of TCPIP Client Input Node points to a configurable service <span class="filepath">TCPIPTutorialClientCF</span>. Also see how the <i>'Records and Elements'</i> tab allows you to configure the record detection. </p>
+								
+							
+								<p> It is important to remember that to successfully deploy your application to the integration server you need to create two required configurable services. To create the configurable service on the target integration node TESTNODE_<i>user_id</i> used by the flow excercizer run the provided <span class="filepath">configure_tcpip.bat</span> file in the IBM Integration Console. </p>
+								
+							
+								<p> <b>Tips:</b>You may need to adjust the ports in the configurable services commands for your system if the 7778 can not be used. You can also change the file paths specified by the Trace and FileOutput nodes. </p>
+								
+							
+								<p> Next, you will deploy and run the tutorial to see how the data travels from the <span class="application">TCPIPServer</span> to the <span class="application">TCPIPClient</span> and then to the file on the file system. Click Run to see those steps. </p>
+								
+							
+						</div>
+						
+						<div class="row content-details">
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/an37200_.htm')" title="Knowledge Center link to Creating Configurable Services">Creating Configurable Services</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67340_.htm')" title="Knowledge Center link to TCPIP Server Output Node">TCPIP Server Output Node</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67300_.htm')" title="Knowledge Center link to TCPIP Client Input Node">TCPIP Client Input Node</a> </li>
+							   	
+							
+							</ul>
+						</div>
+							
+					</div>
+					
+		    	</div>
+		    	<div class="content" id="panel41">
+		    		
+		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+				    	<div class="row content-details">
+					      	<h4>Follow these steps to complete the tutorial</h4>
+					        
+						    
+								<p> Deploy and run the tutorial flows: </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> Open the flow <span class="filepath">TCPIPProvider.msgflow</span> from the application <span class="application">TCPIPServerProvider</span>by double clicking on it. Click the <i>Flow Exerciser</i> icon <img src="http://ot4i.github.io/iib-tutorials/images/icons/iib/startFlowExerciser.png" alt> to start recording the message path through the flow.
+										
+										</li>
+									
+										<li> Click the <i>Send Message</i> icon <img src="http://ot4i.github.io/iib-tutorials/images/icons/iib/sendMessage.png" alt> to select a message to send to the flow.
+										
+										</li>
+									
+										<li> Add a new input message to the tree on the left and check the <i>Import from file</i> option. Then select the file from the workspace <span class="filepath">/DataLibrary/TestSaleMessage.xml</span>. Then click <i>Send</i> button to invoke the flow.
+										
+										</li>
+									
+										<li> After the request message is processed, the message path is automatically highlighted on the message flow.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+								<p> Verify the flow execution: </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> Click on any connection to see the data that passed through that connection.
+										
+										</li>
+									
+										<li> You can also open a trace file <span class="filepath">C:\temp\TCPIP_TRACE.txt</span> specified by the Trace nodes to see how the message travels through the message flows.
+										
+										</li>
+									
+										<li> In the same output directory you should see the output file <span class="filepath">C:\temp\TCPClientTutorialOutput.txt</span> created by the file output node. The file should contain the transformed message SalesReport.
+										
+										</li>
+									
+										<li> To stop recording the message path through the flow, click the <i>Return flow to edit mode</i> icon <img src="http://ot4i.github.io/iib-tutorials/images/icons/iib/stopFlowExerciser.png" alt="Return flow to edit mode">.
+										
+										</li>
+									
+										<li> You can click <b>Clean up</b> action to remove the tutorial source code from the workspace. You need to manually go to the target integration servers and delete the deployed applictaions using <b>Delete</b> context menu.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+						</div>
+						
+						<div class="row content-details"> 	
+							<h4>Find out more</h4>
+							<ul>
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/bz90050_.htm')" title="Knowledge Center link to TCP/IP Data Transfer Overview">TCP/IP Data Transfer Overview</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/ac67370_.htm')" title="Knowledge Center link to TCP/IP Nodes">TCP/IP Nodes</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/ac67390_.htm')" title="Knowledge Center link to TCP/IP Scenarios in Integration Bus">TCP/IP Scenarios in Integration Bus</a> </li>
+							   	
+							
+							</ul>
+						</div>
+							
+					</div>
+					
+					<div class="small-2 medium-2 large-2 columns">
+					
+					
+					
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="cleanUp()" title="Clean up and remove any changes in your workspace made by the tutorial."> Clean Up <img class="icon-image" src="http://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/close-cancel-error_128-red.png"></a></h4>
+				    
+					
+				    </div>
+					
+				</div>	
+			</div> <!-- tab-content -->
+		</div> <!-- columns -->
+	  </div> <!-- row --></body>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/jquery.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/foundation.min.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/main.js"></script>
+	</body>
+<!-- body::End -->
+
+</html>

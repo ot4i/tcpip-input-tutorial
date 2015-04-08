@@ -1,0 +1,50 @@
+{
+  "_comment": "Content from this URL https://github.com/ot4i/ot4i.github.io/blob/master/tutorials/en/repo_metadata.json",
+  "managerUrl": "http://ot4i.github.io/tutorials",
+  "managerVersion": "1.0",
+  "downloadableForLocalInstall": "https://github.com/ot4i/tutorials/releases/download/localInstall.zip",
+  "categories": [
+    {
+      "name": "Tool Capabilities",
+      "description": "Explore Integration Bus concepts by following simple tutorials",
+      "descriptionUrl": "http://ot4i.github.io/tutorials/en/categories/Tools_Category_overview.htm",
+      "iibVersions": "",
+      "visible": "true",
+      "tutorials": [
+	{
+       	    "name"          : "Integration using TCPIP nodes",
+            "version"		: "1.0",
+            "iibVersions"	: "10.*-11.*",
+           	"shortDesc"     : "Learn how to use TCP/IP nodes for integration with external applications using TCPIP sockets. ",
+           	"detailsURL"    : "http://ot4i.github.io/tcpip-input-tutorial/en/details.html",
+           	"stepsURL"      : "http://ot4i.github.io/tcpip-input-tutorial/en/steps.html",
+           	"zipURL"        : "https://github.com/ot4i/tcpip-input-tutorial/releases/download/1.0/TCPIP_Project_Interchange.zip",
+           	"barFile"       : "",
+           	"visible"		: "true",
+           	"tags"			: "tcp;tcpip",
+           	"isPattern"		: "false",
+           	"isFavorite"	: "true",
+           	"projects"		: "TCPIPServer:TCPIPClient:DataLibrary",
+       	    "editorResPaths": [
+           				{
+       		        	        	"id" : "MainFlow",
+       				                "editor" : "",
+    			  	                "wspath" : "<workspace>/TCPIPServer/TCPIPProvider.msgflow"
+       			                }
+        		          ],
+		"deployedResources": [
+				     ]
+	} 
+      ]
+    },
+    {
+      "name": "Scenarios",
+      "description": "Explore powerful Integration Bus capabilities through integrated scenarios",
+      "descriptionUrl": "http://ot4i.github.io/tutorials/en/categories/Scenario_Category_overview.htm",
+      "iibVersions": "",
+      "visible": "true",
+      "tutorials": [
+      ]
+    }
+  ]
+}
