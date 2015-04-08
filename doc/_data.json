@@ -156,10 +156,10 @@
 	          		"_prepareComment":"A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
 	          		"sections":[
 	            		{
-	              			"section":"Open the message flow <span class='filepath'>TCPIPProvider.msgflow</span> in the application <span class='application'>TCPIPServer</span> by double-clicking the flow.The flow sticky notes attached to the nodes provide details of node configuration. You can explore the node configuration in the <b>Properties</b> view by selecting nodes on the editor canvas. Note that the <i>Connection details</i> property of TCPIP Server Output Node points to a configurable service <span class='filepath'>TCPIPTutorialServerCF</span>." 
+	              			"section":"Open the message flow <span class='filepath'>TCPIPProvider.msgflow</span> in the application <span class='application'>TCPIPServer</span> by double-clicking the flow.The flow sticky notes attached to the nodes provide details of node configuration. You can explore the node configuration in the <b>Properties</b> view by selecting nodes on the editor canvas. Note that the <i>'Connection details'</i> property of TCPIP Server Output Node points to a configurable service <span class='filepath'>TCPIPTutorialServerCF</span>." 
 	            		},
 	            		{
-	              			"section":"If you open the message flow <span class='filepath'>TCPIPReceiver.msgflow</span> in the application <span class='application'>TCPIPClient</span> by double-clicking the flow you can also view more information about particular node configuration using the sticky notes. Again note that the <i>Connection details</i> property of TCPIP Client Input Node<i> points to a configurable service <span class='filepath'>TCPIPTutorialClientCF</span>. Also see how the <i>Records and Elements</i> tab allows you to configure the record detection." 
+	              			"section":"If you open the message flow <span class='filepath'>TCPIPReceiver.msgflow</span> in the application <span class='application'>TCPIPClient</span> by double-clicking the flow you can also view more information about particular node configuration using the sticky notes. Again note that the <i>'Connection details'</i> property of TCPIP Client Input Node points to a configurable service <span class='filepath'>TCPIPTutorialClientCF</span>. Also see how the <i>'Records and Elements'</i> tab allows you to configure the record detection." 
 	            		},
 	            		{
 	              			"section":"It is important to remember that to successfully deploy your application to the integration server you need to create two required configurable services. To create the configurable service on the target integration node TESTNODE_<i>user_id</i> used by the flow excercizer run the provided <span class='filepath'>configure_tcpip.bat</span> file in the IBM Integration Console." 
@@ -237,7 +237,7 @@
 				        	          	"details":"To stop recording the message path through the flow, click the <i>Return flow to edit mode</i> icon <img src='http://ot4i.github.io/iib-tutorials/images/icons/iib/stopFlowExerciser.png' alt='Return flow to edit mode' />."
 				                  	},
 				               	  	{
-				                   		"details":"You can click Clean up action to remove the tutorial source code from the workspace. You need to manually go to the target integration servers and delete the deployed applictaions using <b>Delete</b> context menu."
+				                   		"details":"You can click <b>Clean up</b> action to remove the tutorial source code from the workspace. You need to manually go to the target integration servers and delete the deployed applictaions using <b>Delete</b> context menu."
 				           	       	}
 							  	]               	
 				            }
