@@ -162,7 +162,7 @@
 	              			"section":"If you open the message flow <span class='filepath'>TCPIPReceiver.msgflow</span> in the application <span class='application'>TCPIPClient</span> by double-clicking the flow you can also view more information about particular node configuration using the sticky notes. Again note that the <i>Connection details</i> property of TCPIP Client Input Node<i> points to a configurable service <span class='filepath'>TCPIPTutorialClientCF</span>. Also see how the <i>Records and Elements</i> tab allows you to configure the record detection." 
 	            		},
 	            		{
-	              			"section":"It is important to remember that to successfully deploy your application to the integration server you need to create two required configurable services. To create the configurable service on the target integration node TESTNODE_<user_id> used by the flow excercizer run the provided <span class='filepath'>configure_tcpip.bat</span> file in the IBM Integration Console." 
+	              			"section":"It is important to remember that to successfully deploy your application to the integration server you need to create two required configurable services. To create the configurable service on the target integration node TESTNODE_<i>user_id</i> used by the flow excercizer run the provided <span class='filepath'>configure_tcpip.bat</span> file in the IBM Integration Console." 
 	            		},
 	            		{
 	              			"section":"<b>Tips:</b>You may need to adjust the ports in the configurable services commands for your system if the 7778 can not be used. You can also change the file paths specified by the Trace and FileOutput nodes."
