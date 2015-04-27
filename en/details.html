@@ -43,7 +43,7 @@
   </div>
   <div class="row">
     <div class="small-9 medium-9 large-9 columns">
-      <h4>Integration using TCPIP nodes</h4>
+      <h4>Integration using TCP/IP sockets</h4>
     </div>
     <div class="small-3 medium-3 large-3 columns"> 
       <!--a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bz90050_.htm');" class="small right helplink">IBM Knowledge Center Topic</a-->
@@ -52,7 +52,7 @@
   <hr>
   <div class="row">
     <div class="small-12 medium-12 large-12 columns">
-      <h5> Learn how to use TCP/IP nodes for integration with external applications using TCPIP sockets. </h5>
+      <h5> Learn how to use TCP/IP nodes for integration with external applications by using TCP/IP sockets. </h5>
     </div>
   </div>
   <div class="row content-details">
@@ -63,15 +63,15 @@
       <div class="row">
       
         
-        <p> IBM Integration Bus provides a way to integrate with external application through the TCP/IP sockets. You can use TCPIPServer nodes that use server connection type and TCPIPClient nodes utilising client connection type. The connection can be specified using port and host (reqyired by Client nodes) or using TCPIP configurable services names. This tutorial uses configurable services as a convenient way to manage the TCP/IP connections. </p>
+        <p> IBM Integration Bus enables you to integrate with external applications by using TCP/IP sockets. Two sets of TCP/IP message flow nodes exist in IBM Integration Bus: TCPIPServer nodes and TCPIPClient nodes. Both sets have identical function in terms of accessing the data streams; however, one set uses client connections and the other set uses server connections. This tutorial also uses configurable services as a convenient way to manage the TCP/IP connections. </p>
       
-        <p> This tutorial includes an application &#39;TCPIPServer&#39; that simulates a TCP/IP Server that is configured to send the data over the TCPIP sockets. The main flow in the server application is driven by an XML message arriving on the HTTP input node. Once the flow with TCP/IP Server node is deployed the TCPIP server is started automatically. </p>
+        <p> This tutorial includes an application called &#39;TCPIPServer&#39; that simulates a TCP/IP server that is configured to send the data over  TCP/IP sockets. The main flow in the server application is driven by an XML message arriving on the HTTP input node. When the message flow with the TCPIPServer node is deployed, the TCP/IP server is started automatically. </p>
       
-        <p> It also demonstrates how a flow can be driven by the TCPIP Client input node. By default this node does not open a client connection. The way to configure it properly is to use a TCPClient configurable service to enable at least one client connection to be opened when the flow is deployed. The same configurable service also defines the server host name and port to connect to. </p>
+        <p> This tutorial also demonstrates how a message flow can be driven by the TCPIPClient node. By default, this node does not open a client connection. The way to configure it properly is to use a TCPClient configurable service to enable at least one client connection to be opened when the flow is deployed. The same configurable service also defines the server host name and port number. </p>
       
-        <p> An important part of TCPIP input nodes configuration is setting up the proper record detection algorithm. This tutorial demonstrates usage of  &#39;Parsed Record Sequence&#39; record detection using XML messages. </p>
+        <p> An important part of TCP/IP input node configuration is setting up the proper record detection algorithm. This tutorial demonstrates the use  of &#39;Parsed Record Sequence&#39; record detection in XML messages. </p>
       
-        <p> You can also find examples of usage for Trace, FileOutput, Mapping, HTTPInput and HTTPReply nodes. </p>
+        <p> You can also find examples of the use of Trace, FileOutput, Mapping, HTTPInput and HTTPReply nodes. </p>
       
       </div>	  
 		<!-- help links do not work in details page for GA 
@@ -128,11 +128,11 @@
           <ul>
             
             
-              <li>Usage of TCP/IP Client Input node.</li>
+              <li>Use of the TCPIPClientInput node.</li>
             
-              <li>Usage of TCP/IP Server Output node.</li>
+              <li>Usa of TCPIPServerOutput node.</li>
             
-              <li>TCP/IP Configurable Services.</li>
+              <li>TCP/IP configurable services.</li>
             
           </ul>
         </div>
@@ -141,9 +141,9 @@
           <ul>
           
           
-            <li>Understand how to use the TCP/IP Client Input and Server Output nodes in the integration flows.</li>
+            <li>Understand how to use the TCPIPClientInput and the TCPIPServerOutput nodes in integration flows.</li>
           
-            <li>Learn how to configure and manage TCP/IP connection using configurable services.</li>
+            <li>Learn how to configure and manage TCP/IP connections by using configurable services.</li>
           
           </ul>
         </div>

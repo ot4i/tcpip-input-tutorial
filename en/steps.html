@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4 class="title">Integration using TCPIP nodes <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> View Details</div> </action></h4>
+	    <h4 class="title">Integration using TCP/IP sockets <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> View Details</div> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bz90050_.htm')" class="small right helplink">IBM Knowledge Center Topic</a> 
@@ -52,7 +52,7 @@
 	<hr>
 	<div class="row">
 		<div class="small-10 medium-10 large-10 columns">
-		<h5> Learn how to use TCP/IP nodes for integration with external applications using TCPIP sockets. </h5>
+		<h5> Learn how to use TCP/IP nodes for integration with external applications by using TCP/IP sockets. </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
 			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
@@ -82,16 +82,16 @@
 					      	<h4>Import Source Code</h4>
 					        
 						    
-								<p> Click <span class="uicontrol">Import</span> to see appllications <i>TCPIPServer, TCPIPClient</i> and shared library <i>DataLibrary</i> in your workspace. </p>
+								<p> Click <span class="uicontrol">Import</span> to see the <i>TCPIPServer</i> and the <i>TCPIPClient</i> applications, and the <i>DataLibrary</i> shared library in your workspace. </p>
 								
 							
-								<p> A message flow <span class="filepath">TCPIPProvider.msgflow</span> in the application <span class="application">TCPIPServer</span> receives the XML message through HTTP Input node. The message is parsed and passed to the  TCPIP Server Output node to send the data to the client connected on port 7778. The TCPIP Server Output node is configured using configurable service <span class="filepath">TCPIPTutorialServerCF</span>. To avoid deployment errors the configurable service must be created on the target deployment integration node before the application is deployed. Trace nodes are used in this tutorial to trace the data flow into the common file while the data travels across the message flows. </p>
+								<p> Within the <span class="application">TCPIPServer</span> application, a message flow titled  <span class="filepath">TCPIPProvider.msgflow</span>  receives the XML message through an HTTP Input node. The message is parsed and passed to the TCPIPServerOutput node to send the data to the client connected on port 7778. The TCPIPServerOutput node is configured by using the configurable service <span class="filepath">TCPIPTutorialServerCF</span>. To avoid deployment errors, the configurable service must be created on the target deployment integration node before the application is deployed. Trace nodes are used in this tutorial to trace the data flow into the common file while the data travels across the message flow. </p>
 								
 							
-								<p> Application <span class="application">TCPIPClient</span> contains a message flow <span class="filepath">TCPIPReceiver.msgflow</span> which uses the TCPIP Client Input Node to receive the data from the server. The TCPIP Client Input Node is configured with the configigurable service <span class="filepath">TCPIPTutorialClientCF</span> that specifies the host, port, minimum number of automaticaly opened client connections. This message flow also contains a mapping node using nested maps to that transforms the message with arrays to a message with a different format. Finally the message is written to a file through the File Output node. </p>
+								<p> The <span class="application">TCPIPClient</span> application contains a message flow called  <span class="filepath">TCPIPReceiver.msgflow</span>, which uses the TCPIPClientInput node to receive the data from the server. The TCPIPClientInput node is configured with the configurable service <span class="filepath">TCPIPTutorialClientCF</span> that specifies the host, the port, and the minimum number of  client connections that are automatically opened. This message flow also contains a mapping node that uses nested maps to  transform the message data into a different format. Finally, the message is written to a file through the FileOutput node. </p>
 								
 							
-								<p> Shared library <span class="library">DataLibrary</span> contains a message models for the input and output message formats <i>SaleReport.xsd</i>, <i>SaleMessage.xsd</i> as well as test message that will be used to initiate the tutorial flow <i>TestSaleMessage.xml</i>. It also contains a batch file that contains commands that need to be executed in the IBM Integration Console to create both required configurable services <i>configure_tcpip.bat</i>.  </p>
+								<p> Shared library <span class="library">DataLibrary</span> contains a message model for the input and output message formats <span class="filepath">SaleReport.xsd</span>, <span class="filepath">SaleMessage.xsd</span>, as well as a test message that will be used to initiate the tutorial flow <span class="filepath">TestSaleMessage.xml</span>. It also contains a batch file that contains commands that need to be executed in the IBM Integration Console to create both required configurable services <span class="filepath">configure_tcpip.bat</span>. </p>
 								
 							
 						</div>
@@ -102,7 +102,7 @@
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67370_.htm')" title="Knowledge Center link to TCPIP Nodes">TCPIP Nodes</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67370_.htm')" title="Knowledge Center link to TCP/IP nodes">TCP/IP nodes</a> </li>
 							   	
 							
 							</ul>
@@ -126,19 +126,19 @@
 						  	<h4>Exploring the flows and creating configurable services</h4>
 						    
 						    
-								<p> Open the message flow <span class="filepath">TCPIPProvider.msgflow</span> in the application <span class="application">TCPIPServer</span> by double-clicking the flow.The flow sticky notes attached to the nodes provide details of node configuration. You can explore the node configuration in the <b>Properties</b> view by selecting nodes on the editor canvas. Note that the <i>'Connection details'</i> property of TCPIP Server Output Node points to a configurable service <span class="filepath">TCPIPTutorialServerCF</span>. </p>
+								<p> Open the message flow <span class="filepath">TCPIPProvider.msgflow</span> in the application <span class="application">TCPIPServer</span>. The  annotations attached to the nodes provide details of the node configuration. To view details about each node, click on the <b>Properties</b> view and then select a nodes on the editor canvas. Note that the <i>'Connection details'</i> property of TCPIPServerOutput node points to a configurable service <span class="filepath">TCPIPTutorialServerCF</span>. </p>
 								
 							
-								<p> If you open the message flow <span class="filepath">TCPIPReceiver.msgflow</span> in the application <span class="application">TCPIPClient</span> by double-clicking the flow you can also view more information about particular node configuration using the sticky notes. Again note that the <i>'Connection details'</i> property of TCPIP Client Input Node points to a configurable service <span class="filepath">TCPIPTutorialClientCF</span>. Also see how the <i>'Records and Elements'</i> tab allows you to configure the record detection. </p>
+								<p> If you open the message flow <span class="filepath">TCPIPReceiver.msgflow</span> in the application <span class="application">TCPIPClient</span>, you can also view more information about particular node configuration by viewing the annotations shown on the canvas. Again note that the <i>'Connection details'</i> property of the TCPIPClientInput node points to a configurable service <span class="filepath">TCPIPTutorialClientCF</span>. The <i>'Records and Elements'</i> tab allows you to configure the record detection. </p>
 								
 							
-								<p> It is important to remember that to successfully deploy your application to the integration server you need to create two required configurable services. To create the configurable service on the target integration node TESTNODE_<i>user_id</i> used by the flow excercizer run the provided <span class="filepath">configure_tcpip.bat</span> file in the IBM Integration Console. </p>
+								<p> To successfully deploy your application to the integration server, you must create two required configurable services. To create the configurable service on the target integration node TESTNODE_<i>user_id</i> used by the Flow Exerciser, run the provided <span class="filepath">configure_tcpip.bat</span> file in the IBM Integration Console.  </p>
 								
 							
-								<p> <b>Tips:</b>You may need to adjust the ports in the configurable services commands for your system if the 7778 can not be used. You can also change the file paths specified by the Trace and FileOutput nodes. </p>
+								<p> <b>Tip:</b>You might need to adjust the ports in the configurable services commands for your system if the 7778 port can not be used. You can also change the file paths specified by the Trace and FileOutput nodes. </p>
 								
 							
-								<p> Next, you will deploy and run the tutorial to see how the data travels from the <span class="application">TCPIPServer</span> to the <span class="application">TCPIPClient</span> and then to the file on the file system. Click Run to see those steps. </p>
+								<p> Next, you will deploy and run the tutorial to see how the data travels from the <span class="application">TCPIPServer</span> node to the <span class="application">TCPIPClient</span> node and then to the file on the file system. Click Run to see those steps. </p>
 								
 							
 						</div>
@@ -149,17 +149,17 @@
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/an37200_.htm')" title="Knowledge Center link to Creating Configurable Services">Creating Configurable Services</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/an37200_.htm')" title="Knowledge Center link to Creating configurable services">Creating configurable services</a> </li>
 							   	
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67340_.htm')" title="Knowledge Center link to TCPIP Server Output Node">TCPIP Server Output Node</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67340_.htm')" title="Knowledge Center link to TCPIPServerOutput node">TCPIPServerOutput node</a> </li>
 							   	
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67300_.htm')" title="Knowledge Center link to TCPIP Client Input Node">TCPIP Client Input Node</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac67300_.htm')" title="Knowledge Center link to TCPIPClientInput node">TCPIPClientInput node</a> </li>
 							   	
 							
 							</ul>
@@ -176,14 +176,14 @@
 					      	<h4>Follow these steps to complete the tutorial</h4>
 					        
 						    
-								<p> Deploy and run the tutorial flows: </p>
+								<p> Deploy and run the tutorial message flows: </p>
 								
 								
 									
 									<ol>
 									
 									
-										<li> Open the flow <span class="filepath">TCPIPProvider.msgflow</span> from the application <span class="application">TCPIPServerProvider</span>by double clicking on it. Click the <i>Flow Exerciser</i> icon <img src="http://ot4i.github.io/iib-tutorials/images/icons/iib/startFlowExerciser.png" alt> to start recording the message path through the flow.
+										<li> Open the  <span class="filepath">TCPIPProvider.msgflow</span> flow from the application <span class="application">TCPIPServer</span> by double clicking on it. Click the <i>Flow Exerciser</i> icon <img src="http://ot4i.github.io/iib-tutorials/images/icons/iib/startFlowExerciser.png" alt> to start recording the message path through the flow. 
 										
 										</li>
 									
@@ -191,7 +191,7 @@
 										
 										</li>
 									
-										<li> Add a new input message to the tree on the left and check the <i>Import from file</i> option. Then select the file from the workspace <span class="filepath">/DataLibrary/TestSaleMessage.xml</span>. Then click <i>Send</i> button to invoke the flow.
+										<li> Add a new input message to the tree on the left and check the <i>Import from file</i> option. Then select the file from the workspace <span class="filepath">/DataLibrary/TestSaleMessage.xml</span>. Then click the <i>Send</i> button to invoke the flow.
 										
 										</li>
 									
@@ -219,7 +219,7 @@
 										
 										</li>
 									
-										<li> In the same output directory you should see the output file <span class="filepath">C:\temp\TCPClientTutorialOutput.txt</span> created by the file output node. The file should contain the transformed message SalesReport.
+										<li> The same output directory contains the output file <span class="filepath">C:\temp\TCPClientTutorialOutput.txt</span> created by the file output node. The file contains the transformed message SalesReport.
 										
 										</li>
 									
@@ -227,7 +227,7 @@
 										
 										</li>
 									
-										<li> You can click <b>Clean up</b> action to remove the tutorial source code from the workspace. You need to manually go to the target integration servers and delete the deployed applictaions using <b>Delete</b> context menu.
+										<li> You can click the <b>Clean up</b> action to remove the tutorial source code from the workspace. You need to manually go to the target integration servers and delete the deployed applications by using the <b>Delete</b> context menu.
 										
 										</li>
 									
@@ -244,17 +244,17 @@
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/bz90050_.htm')" title="Knowledge Center link to TCP/IP Data Transfer Overview">TCP/IP Data Transfer Overview</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/bz90050_.htm')" title="Knowledge Center link to Processing TCP/IP messages">Processing TCP/IP messages</a> </li>
 							   	
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/ac67370_.htm')" title="Knowledge Center link to TCP/IP Nodes">TCP/IP Nodes</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/ac67370_.htm')" title="Knowledge Center link to TCP/IP nodes">TCP/IP nodes</a> </li>
 							   	
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/ac67390_.htm')" title="Knowledge Center link to TCP/IP Scenarios in Integration Bus">TCP/IP Scenarios in Integration Bus</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('//com.ibm.etools.mft.doc/ac67390_.htm')" title="Knowledge Center link to TCP/IP scenarios in IBM Integration Bus">TCP/IP scenarios in IBM Integration Bus</a> </li>
 							   	
 							
 							</ul>
