@@ -115,7 +115,7 @@
 	          		"_createComment":"A description of what will happen when the user clicks Import.",
 	          		"sections":[
 	            		{
-	              			"section":"Click <span class='uicontrol'>Import</span> to see the <span class='application'>TCPIPServer</span> and <span class='application'>TCPIPClient</span> applications, and the <span class='library'>DataLibrary</span> shared library in your workspace."
+	              			"section":"Click <span class='uicontrol'>Import</span> to load the <span class='application'>TCPIPServer</span> and <span class='application'>TCPIPClient</span> applications, and the <span class='library'>DataLibrary</span> shared library into your workspace. These resources are then listed in the Application Development view"
 	            		},
 	            		{
 	              			"section":"Within the <span class='application'>TCPIPServer</span> application, a message flow titled  <span class='filepath'>TCPIPProvider.msgflow</span>  receives the XML message through an HTTPInput node. The message is parsed and passed to the TCPIPServerOutput node to send the data to the client connected on port 7778. The TCPIPServerOutput node is configured by using the configurable service <span class='filepath'>TCPIPTutorialServerCF</span>. To avoid deployment errors, the configurable service must be created on the target deployment integration node before the application is deployed. Trace nodes are used in this tutorial to trace the data flow into the common file while the data travels through the message flow."
