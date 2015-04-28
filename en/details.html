@@ -65,7 +65,7 @@
         
         <p> IBM Integration Bus enables you to integrate with external applications by using TCP/IP sockets. Two sets of TCP/IP message flow nodes exist in IBM Integration Bus: TCPIPServer nodes and TCPIPClient nodes. Both sets have identical function in terms of accessing the data streams; however, one set uses client connections and the other set uses server connections. This tutorial also uses configurable services as a convenient way to manage the TCP/IP connections. </p>
       
-        <p> This tutorial includes an application called &#39;TCPIPServer&#39; that simulates a TCP/IP server that is configured to send the data over  TCP/IP sockets. The main flow in the server application is driven by an XML message arriving on the HTTP input node. When the message flow with the TCPIPServer node is deployed, the TCP/IP server is started automatically. </p>
+        <p> This tutorial includes an application called &#39;TCPIPServer&#39; that simulates a TCP/IP server that is configured to send the data over  TCP/IP sockets. The main message flow in the server application is driven by an XML message arriving on the HTTPInput node. When the message flow with the TCPIPServer node is deployed, the TCP/IP server is started automatically. </p>
       
         <p> This tutorial also demonstrates how a message flow can be driven by the TCPIPClient node. By default, this node does not open a client connection. The way to configure it properly is to use a TCPClient configurable service to enable at least one client connection to be opened when the flow is deployed. The same configurable service also defines the server host name and port number. </p>
       
@@ -130,7 +130,7 @@
             
               <li>Use of the TCPIPClientInput node.</li>
             
-              <li>Usa of TCPIPServerOutput node.</li>
+              <li>Use of the TCPIPServerOutput node.</li>
             
               <li>TCP/IP configurable services.</li>
             
