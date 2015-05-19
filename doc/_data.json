@@ -161,16 +161,16 @@
 	              			"section":"If you open the message flow <span class='msgflow'>TCPIPReceiver.msgflow</span> in the application <span class='application'>TCPIPClient</span>, you can also view more information about particular node configuration by viewing the annotations shown on the canvas. The <span class='property'>Connection details'</span> property of the TCPIPClientInput node points to a configurable service <span class='resource'>TCPIPTutorialClientCF</span>. The <span class='property'>Records and Elements</span> tab allows you to configure the record detection."
 	            		},
 	            		{
-	              			"section":"The output data will be written to a file using the FileOutput node. You may need to update the node property <span class='property'>Directory</span> to point to a valid accessible folder on your file system."
-	            		},
-	            		{
 	              			"section":"To successfully deploy your application to the integration server, you must create two required configurable services. To create the configurable service on the target integration node TESTNODE_<span class='varname'>user_id</span> used by the Flow Exerciser, run the provided <span class='filepath'>configure_tcpip.bat</span> file in the IBM Integration Console. "
 	            		},
 	            		{
-	              			"section":"To make sure that your Trace nodes successfully write the test data into the files you need to make sure that the <span class='property'>File path<span> node property points to a valid file name for your system."
+	              			"section":"<b>Tip 1:</b>You might need to adjust the ports in the configurable services commands for your system if port 7778 cannot be used. You can also change the file paths specified by the Trace and FileOutput nodes."
 	            		},
 	            		{
-	              			"section":"<b>Tip:</b>You might need to adjust the ports in the configurable services commands for your system if port 7778 cannot be used. You can also change the file paths specified by the Trace and FileOutput nodes."
+	              			"section":"<b>Tip 2:</b>You may need to update the <span class='property'>Directory</span> property of the FileOutput node to point to a valid accessible folder on your file system."
+	            		},
+	            		{
+	              			"section":"<b>Tip 3:</b>To make sure that the Trace nodes successfully write the data into the files you may also need to update the <span class='property'>File path</span> property to make sure that it points to a valid file name."
 	            		},
 	            		{
 	              			"section":"Next, you will deploy and run the tutorial to see how the data travels from the <span class='application'>TCPIPServer</span> node to the <span class='application'>TCPIPClient</span> node and then to the file on the file system. Click <span class='uicontrol'>Run</span> to see those steps."
