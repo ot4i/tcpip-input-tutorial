@@ -167,10 +167,7 @@
 	              			"section":"<b>Tip 1:</b>You might need to adjust the ports in the configurable services commands for your system if port 7778 cannot be used. You can also change the file paths specified by the Trace and FileOutput nodes."
 	            		},
 	            		{
-	              			"section":"<b>Tip 2:</b>You may need to update the <span class='property'>Directory</span> property of the FileOutput node to point to a valid accessible folder on your file system."
-	            		},
-	            		{
-	              			"section":"<b>Tip 3:</b>To make sure that the Trace nodes successfully write the data into the files you may also need to update the <span class='property'>File path</span> property to make sure that it points to a valid file name."
+	              			"section":"<b>Tip 2:</b>You may need to update the file system paths used by the Trace and FileOutput nodes if your operating system is not Windows. <span class='property'>Directory</span> property of the FileOutput node specifies the directory where the output file is written to. <span class='property'>File path</span> property of the Trace nodes specify the full path to the trace file. By default all the files are written to 'C:\temp'. "
 	            		},
 	            		{
 	              			"section":"Next, you will deploy and run the tutorial to see how the data travels from the <span class='application'>TCPIPServer</span> node to the <span class='application'>TCPIPClient</span> node and then to the file on the file system. Click <span class='uicontrol'>Run</span> to see those steps."
