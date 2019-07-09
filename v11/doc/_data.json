@@ -52,7 +52,7 @@
 	          		"title":"Use of the TCPIPServerOutput node."
 	        	},
 	        	{
-	          		"title":"TCP/IP configurable services."
+	          		"title":"TCP/IP policies."
 	        	}
 	      	],
 			"outcomesName":"Learning outcomes",
@@ -62,7 +62,7 @@
 	          		"title":"Understand how to use the TCPIPClientInput and the TCPIPServerOutput nodes in integration flows."
 	        	},
 	        	{
-	          		"title":"Learn how to configure and manage TCP/IP connections by using configurable services."
+	          		"title":"Learn how to configure and manage TCP/IP connections by using policies."
 	        	}
 	      	],
 	      	"summary":{
