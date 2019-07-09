@@ -13,7 +13,7 @@
       <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="236,96" destination="file" filePath="C:\temp\TCPIP_TRACE.txt" pattern="Message received by the TCPIPProvider HTTP input node.&#xD;&#xA;&#xD;&#xA;Message body:&#xD;&#xA;${Body}">
         <translation xmi:type="utility:ConstantString" string="Trace"/>
       </nodes>
-      <nodes xmi:type="ComIbmTCPIPServerOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="412,96" connectionDetails="TCPIPTutorialServerCF" validateMaster="contentAndValue">
+      <nodes xmi:type="ComIbmTCPIPServerOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="412,96" connectionDetails="{TCPIPPolicies}:TCPIPTutorialServer" validateMaster="contentAndValue">
         <translation xmi:type="utility:ConstantString" string="TCPIP Server Output"/>
       </nodes>
       <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="635,94">
@@ -33,10 +33,10 @@
         <body xmi:type="utility:ConstantString" string="All trace messages are written&#xA;to C:\temp\TCPIP_TRACE.txt."/>
       </stickyNote>
       <stickyNote location="476,162" association="FCMComposite_1_3">
-        <body xmi:type="utility:ConstantString" string="TCPIP Server Output node only needs to specify &#xA;the configurable service name that should be defined &#xA;on the deployment target node using 'Connection details' &#xA;property. The configurable service TCPIPTutorialServerCF&#xA;defines port 7778 (see configure_tcpip.bat in DataLibrary)"/>
+        <body xmi:type="utility:ConstantString" string="The TCPIP Server Output node only needs to specify &#xA;the policy name for the 'Connection details' &#xA;property. This policy, named TCPIPTutorialServer, &#xA;resides in the policy project named TCPIPPolicies.  &#xA;The policy specifies port 7778 should be opened."/>
       </stickyNote>
       <stickyNote location="23,200" association="FCMComposite_1_1">
-        <body xmi:type="utility:ConstantString" string="The HTTP input node is configured &#xA;to process the XML messages on the &#xA;URL http://localhost:&lt;HTTP server port>/TestTcpip.&#xA;You can find the HTTP port using mqsireportproperties&#xA;command for your Integration server and  &#xA;HTTPConnector object."/>
+        <body xmi:type="utility:ConstantString" string="The HTTP input node is configured &#xA;to process the XML messages on the URL&#xA;http://localhost:&lt;HTTP server port>/TestTcpip"/>
       </stickyNote>
     </stickyBoard>
   </eClassifiers>

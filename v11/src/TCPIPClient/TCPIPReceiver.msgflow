@@ -7,7 +7,7 @@
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/TCPIPClient/icons/full/obj30/TCPIPReceiver.gif"/>
     <longDescription xmi:type="utility:ConstantString" string="Sample program for use with IBM Integration Bus&#xD;&#xA;© Copyright International Business Machines Corporation 2009, 2010&#xD;&#xA;Licensed Materials - Property of IBM"/>
     <composition>
-      <nodes xmi:type="ComIbmTCPIPClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="44,199" connectionDetails="TCPIPTutorialClientCF" modifyOutputStream="release" messageDomainProperty="XMLNSC" messageSetProperty="{DataLibrary}" recordDetection="parsedRecordSequence" customDelimiter="00">
+      <nodes xmi:type="ComIbmTCPIPClientInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="44,199" connectionDetails="{TCPIPPolicies}:TCPIPTutorialClient" modifyOutputStream="release" messageDomainProperty="XMLNSC" messageSetProperty="{DataLibrary}" recordDetection="parsedRecordSequence" customDelimiter="00">
         <translation xmi:type="utility:ConstantString" string="TCPIPClientInput"/>
       </nodes>
       <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="200,199" destination="file" filePath="C:\temp\TCPIP_TRACE.txt" pattern="Message received by the TCPIP Client:&#xD;&#xA;Message contents:&#xD;&#xA;${Body}">
@@ -34,10 +34,10 @@
     <propertyOrganizer/>
     <stickyBoard>
       <stickyNote location="21,17" association="FCMComposite_1_3">
-        <body xmi:type="utility:ConstantString" string="TCPIPClientInput node only needs to specify &#xA;the configurable service TCPIPTutorialClientCF &#xA;to connect. This service defines the server host &#xA;port and number of min connections to &#xA;maintain (configure_tcpip.bat in DataLibrary)"/>
+        <body xmi:type="utility:ConstantString" string="The TCPIPClientInput node only needs to specify &#xA;the policy name for the Connection details property. &#xA;This policy, named TCPIPTutorialClient, resides in the&#xA;policy project named TCPIPPolicies. This service defines&#xA;the server host port and the minimum number of &#xA;connections to maintain."/>
       </stickyNote>
       <stickyNote location="473,18" association="FCMComposite_1_2">
-        <body xmi:type="utility:ConstantString" string="File Output node is configured to write or append to&#xA;to the file TCPClientTutorialOutput.txt in the C:\temp directory.&#xA;You can change Basic properties: Directory and File name or pattern to &#xA;change where your data is written to. "/>
+        <body xmi:type="utility:ConstantString" string="The File Output node is configured to write (append) data to&#xA;to the file TCPClientTutorialOutput.txt in the C:\temp directory.&#xA;The Basic properties: &quot;Directory&quot; and &quot;File name or pattern&quot; &#xA;can be used to change where your data is written to. "/>
       </stickyNote>
       <stickyNote location="265,292" association="FCMComposite_1_5 FCMComposite_1_1">
         <body xmi:type="utility:ConstantString" string="All trace messages are written&#xA;to C:\temp\TCPIP_TRACE.txt."/>
