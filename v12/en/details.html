@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+ 
+	
+<!-- header::Start -->
+	<head>
+		<!-- Use Internet Explorer 9 Standards mode for Eclipse Browser Control - https://www.eclipse.org/swt/faq.php#browsernativeie and https://msdn.microsoft.com/en-us/library/jj676915%28v=vs.85%29.aspx -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		
+		<!-- Next 2 http=equiv headers required to disable caching the Eclipse Browser Widget -->
+		<meta http-equiv="Pragma" content="no-cache">
+  		<meta http-equiv="Expires" content="-1">
+
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
+		<meta name="abstract" content="IBM App Connect Enterprise V11 Tutorial">
+		<meta name="author" content="IBM">
+		<meta name="description" content="IBM App Connect Enterprise V11 Tutorial">
+		<meta name="keywords" content="keywords" > 
+		<meta name="robots" content="index,follow">
+		<meta name="source" content="IBM App Connect Enterprise V11 Tutorial" /> 
+		
+		<title>IBM App Connect Enterprise V11 Tutorial</title>
+
+    	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
+		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
+    	
+		<script src="https://ot4i.github.io/iib-tutorials/js/json2.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/js2java.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/js2java_steps.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
+	</head>
+<!-- header::End -->
+<!-- body::Start -->
+		<body>
+    <!-- body content here -->
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+      <p> </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-9 medium-9 large-9 columns">
+      <h4>Using the TCP/IP nodes to integrate with TCP/IP sockets</h4>
+    </div>
+    <div class="small-3 medium-3 large-3 columns"> 
+      <!--a href="javascript:;" onclick="openHelpSystem('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm');" class="small right helplink">IBM Knowledge Center</a-->
+    </div>
+  </div> 
+  <hr>
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+      <h5> Learn how to use TCP/IP nodes for integration with external applications by using TCP/IP sockets. </h5>
+    </div>
+  </div>
+  <div class="row content-details">
+    <div class="small-6 medium-6 large-6 columns">
+      <div class="row">
+        <h5> OVERVIEW </h5>
+      </div>
+      <div class="row">
+      
+        
+        <p> IBM App Connect Enterprise enables you to integrate with external applications by using TCP/IP sockets. Two sets of TCP/IP message flow nodes exist in IBM App Connect Enterprise: TCPIPServer nodes and TCPIPClient nodes. Both sets have identical function in terms of accessing the data streams; however, one set uses client connections and the other set uses server connections. This tutorial also uses policies as a convenient way to manage the TCP/IP connections. </p>
+      
+        <p> This tutorial includes an application called &#39;TCPIPServer&#39; that simulates a TCP/IP server that is configured to send the data over TCP/IP sockets. The main message flow in the server application is driven by an XML message arriving on the HTTPInput node. When the message flow with the TCPIPServer node is deployed, the TCP/IP server is started automatically. </p>
+      
+        <p> This tutorial also demonstrates how a message flow can be driven by the TCPIPClient node. By default, this node does not open a client connection. The way to configure it properly is to use a TCPClient policy to enable at least one client connection to be opened when the flow is deployed. The same policy also defines the server host name and port number to connect to. </p>
+      
+        <p> An important part of TCP/IP input node configuration is setting up the proper record detection algorithm. This tutorial demonstrates the use  of &#39;Parsed Record Sequence&#39; record detection in XML messages. </p>
+      
+        <p> The message flows used in this tutorial also utilise other message flow nodes such as Trace, FileOutput, Mapping, HTTPInput and HTTPReply nodes. </p>
+      
+      </div>	  
+		<!-- help links do not work in details page for GA 
+        
+		<div class="row content-details">
+			<h4>Find out more</h4>
+			<ul>
+			
+				
+				
+				<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90050_.htm')" title="Knowledge Center link to  TCP/IP Data Transfer Overview">TCP/IP Data Transfer Overview</a> </li>
+					
+			
+				
+				
+				<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67370_.htm')" title="Knowledge Center link to  TCP/IP Nodes">TCP/IP Nodes</a> </li>
+					
+			
+				
+				
+				<li> <a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67390_.htm')" title="Knowledge Center link to  TCP/IP Scenarios in App Connect Enterprise">TCP/IP Scenarios in App Connect Enterprise</a> </li>
+					
+			
+			</ul>
+		</div>
+				  
+        -->
+        
+    </div><!-- End Columns -->
+    <div class="small-offset-1 small-5 medium-offset-1 medium-5 large-offset-1 large-5 columns">
+      <div class="row">
+        <div class="panel radius" style="margin:0px; margin-bottom:10px; padding:5px">
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+              <img class="icon-image" src="https://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/clock-time_128.png">
+            </div>
+            <div class="small-10 large-10 columns">
+              This tutorial takes approximately <b>10 minutes</b>.
+            </div>
+          </div>
+          <div class="row" style="margin-left: 1rem; text-align: center">
+            <action>
+              <button class="small radius button" tabindex="0" id="startTutorial" onclick="startTutorialFromDetailsScreen()"> Start Tutorial
+            </button>
+            </action>
+            <button class="small radius button" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</button>
+          </div>
+        </div>
+      </div>
+      <div class="row content-details">
+        <div class="small-6 medium-6 large-6 columns">
+          <h5> Tutorial Topics </h5>
+          <ul>
+            
+            
+              <li>Use of the TCPIPClientInput node.</li>
+            
+              <li>Use of the TCPIPServerOutput node.</li>
+            
+              <li>TCP/IP policies.</li>
+            
+          </ul>
+        </div>
+        <div class="small-6 medium-6 large-6 columns">
+          <h5>Learning outcomes </h5>
+          <ul>
+          
+          
+            <li>Understand how to use the TCPIPClientInput and the TCPIPServerOutput nodes in integration flows.</li>
+          
+            <li>Learn how to configure and manage TCP/IP connections by using policies.</li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div></body>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/jquery.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/foundation.min.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/main.js"></script>
+	</body>
+<!-- body::End -->
+
+</html>
