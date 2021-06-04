@@ -37,8 +37,8 @@
 	      	"_resourceToOpenComment":"The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
 	      	"resourceToOpen":"MainFlow",
 	      	"helpLink":{
-	       		"text": "IBM Knowledge Center",
-           		"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+	       		"text": "IBM Documentation",
+           		"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/acesw_home.html"
 	      	}
 	    },
 	    "pageDetails":{
@@ -90,21 +90,21 @@
 	        	"title":"Find out more",
 	          	"details":[
 	            	{
-	              		"title":"Knowledge Center link to ",
+	              		"title":"IBM Documentation link to ",
 	              		"description":"TCP/IP Data Transfer Overview",
-	              		"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90050_.htm",
+	              		"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bz90050_.htm",
 						"type": "web"
 	            	},
 	            	{
-	              		"title":"Knowledge Center link to ",
+	              		"title":"IBM Documentation link to ",
 	              		"description":"TCP/IP Nodes",
-	              		"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67370_.htm",
+	              		"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ac67370_.htm",
 						"type": "web"
 	            	},
 	            	{
-	              		"title":"Knowledge Center link to ",
+	              		"title":"IBM Documentation link to ",
 	              		"description":"TCP/IP Scenarios in App Connect Enterprise",
-	              		"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67390_.htm",
+	              		"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ac67390_.htm",
 						"type": "web"
 	            	}
 	          	]
@@ -135,9 +135,9 @@
 	          		"title":"Find out more",
 	          		"details":[
 	            		{
-	              			"title":"Knowledge Center link to ",
+	              			"title":"IBM Documentation link to ",
 	              			"description":"TCP/IP nodes",
-	              			"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67370_.htm",
+	              			"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ac67370_.htm",
 							"type": "web"
 	            		}
 	          		]
@@ -179,15 +179,15 @@
 	        		"title":"Find out more",
 	          		"details":[
 	            		{
-	              			"title":"Knowledge Center link to ",
+	              			"title":"IBM Documentation link to ",
 	              			"description":"TCPIPServerOutput node",
-	              			"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67340_.htm",
+	              			"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ac67340_.htm",
 							"type":"web"
 	            		},
 	            		{
-	              			"title":"Knowledge Center link to ",
+	              			"title":"IBM Documentation link to ",
 	              			"description":"TCPIPClientInput node",
-	              			"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67300_.htm",
+	              			"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ac67300_.htm",
 							"type":"web"
 	            		}
 	          		]
@@ -251,21 +251,21 @@
 	        		"title":"Find out more",
 	          		"details":[
 	            		{
-	                		"title":"Knowledge Center link to ",
+	                		"title":"IBM Documentation link to ",
 	                		"description":"Processing TCP/IP messages",
-	                		"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bz90050_.htm",
+	                		"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bz90050_.htm",
 							"type":"web"
 	             		},
 	             		{
-		               		"title":"Knowledge Center link to ",
+		               		"title":"IBM Documentation link to ",
 	                		"description":"TCP/IP nodes",
-	                		"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67370_.htm",
+	                		"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ac67370_.htm",
 							"type":"web"
 	             		},
 	             		{
-		                	"title":"Knowledge Center link to ",
+		                	"title":"IBM Documentation link to ",
 	                		"description":"TCP/IP scenarios in IBM App Connect Enterprise",
-	                		"link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac67390_.htm",
+	                		"link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ac67390_.htm",
 							"type":"web"
 	             		}
 	          		]
